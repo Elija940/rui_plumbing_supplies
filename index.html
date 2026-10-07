@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rui Plumbing Supplies</title>
+<meta name="description" content="Pipes, valves, tanks, pumps and water heaters for homes, sites and contractors.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="#">Rui Plumbing Supplies</a>
+  <button class="btn ghost" id="cartBtn">Cart (<span id="count">0</span>)</button>
+</header>
+
+<section class="hero">
+  <h1>Everything your water system needs, from pipe to pump.</h1>
+  <p>Pipes, valves, tanks, pumps and water heaters for homes, building sites and contractors.</p>
+  <a class="btn" href="#shop">Shop products</a>
+</section>
+<div class="pipe" aria-hidden="true"></div>
+
+<main id="shop">
+  <div class="filters" id="filters"></div>
+  <div class="grid" id="grid"></div>
+</main>
+
+<aside id="cart" hidden aria-label="Your cart">
+  <div class="cart-head"><h2>Your order</h2><button class="btn ghost" id="closeCart">Close</button></div>
+  <ul id="lines"></ul>
+  <p class="total">Total <strong id="total">KES 0</strong></p>
+  <form id="order">
+    <label>Full name<input name="name" required autocomplete="name"></label>
+    <label>Phone number (M-Pesa)<input name="phone" type="tel" required autocomplete="tel" placeholder="07XX XXX XXX"></label>
+    <label>Delivery location<input name="place" required></label>
+    <button class="btn" type="submit">Place order</button>
+  </form>
+  <p id="msg" role="status"></p>
+</aside>
+
+<footer><p>Rui Plumbing Supplies. Prices shown are samples until you set your own in products.js.</p></footer>
+<script src="products.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
